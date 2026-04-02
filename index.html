@@ -20,14 +20,15 @@
       background: linear-gradient(135deg, #081a33, #1f3f6d);
       color: white;
       text-align: center;
-      padding: 140px 20px 100px;
+      padding: 100px 20px 70px;
       position: relative;
       box-shadow: inset 0 -15px 30px rgba(0,0,0,0.2);
     }
 
     .logo {
-      width: 420px;
-      margin-bottom: 30px;
+      width: auto;
+      height: 180px;
+      margin-bottom: 25px;
       filter: drop-shadow(0px 12px 25px rgba(0,0,0,0.55));
     }
 
@@ -59,12 +60,14 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
     }
 
-    .hero .btn-hero:hover {
+    .hero .btn-hero:hover,
+    .hero .btn-hero.active {
       transform: translateY(-3px);
       box-shadow: 0px 8px 18px rgba(0,0,0,0.4);
+      background: #1f5aa7;
     }
 
     /* SECTIONS */
@@ -91,7 +94,15 @@
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s, background 0.3s, border-color 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s, border-color 0.3s, opacity 0.6s, transform 0.6s;
+      background: white;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .card:hover {
@@ -101,20 +112,14 @@
     }
 
     /* SECTION GRADIENT BACKGROUNDS */
-    #services {
-      background: linear-gradient(135deg, #f9fafe, #dce6f7);
-    }
-    #experience {
-      background: linear-gradient(120deg, #f0f4f9, #cdd8ee);
-    }
-    #credentials {
-      background: linear-gradient(150deg, #e8edf4, #c3d0e6);
-    }
+    #services { background: linear-gradient(135deg, #f9fafe, #dce6f7); }
+    #experience { background: linear-gradient(120deg, #f0f4f9, #cdd8ee); }
+    #credentials { background: linear-gradient(150deg, #e8edf4, #c3d0e6); }
 
-    /* CARD ACCENT BORDERS MATCHING GRADIENTS */
-    #services .card { border-top: 4px solid #0f4c81; background: #f9fafe; }
-    #experience .card { border-left: 4px solid #1f3f6d; background: #f0f4f9; }
-    #credentials .card { border-left: 4px solid #0f4c81; background: #e8edf4; }
+    /* CARD ACCENT BORDERS */
+    #services .card { border-top: 4px solid #0f4c81; }
+    #experience .card { border-left: 4px solid #1f3f6d; }
+    #credentials .card { border-left: 4px solid #0f4c81; }
 
     /* CONTACT */
     .contact {
@@ -140,10 +145,10 @@
       box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
     }
 
+    ul { margin: 10px 0 0 20px; }
+
     @media(min-width: 800px) {
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -176,10 +181,42 @@
   <div class="section" id="services">
     <h2>Services</h2>
     <div class="grid">
-      <div class="card"><h3>Utilization Review</h3><p>Medical necessity determinations with clear, guideline-based rationale and defensible documentation.</p></div>
-      <div class="card"><h3>Independent Medical Examinations</h3><p>Objective, comprehensive evaluations for disability, workers’ compensation, and legal cases.</p></div>
-      <div class="card"><h3>Peer Review</h3><p>Ambulatory and acute care case review focused on quality, appropriateness, and adherence to standards.</p></div>
-      <div class="card"><h3>Physician Consulting</h3><p>Clinical operations, utilization strategy, and performance evaluation for healthcare organizations.</p></div>
+      <div class="card">
+        <h3>Utilization Review</h3>
+        <ul>
+          <li>High-volume medical necessity determinations</li>
+          <li>Evidence-based guideline application (ODG, MCG, AMA Guides)</li>
+          <li>Rapid, consistent, and defensible documentation</li>
+          <li>Peer collaboration for complex case resolution</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Independent Medical Examinations (IME)</h3>
+        <ul>
+          <li>Objective evaluations for disability and workers’ compensation</li>
+          <li>Comprehensive chart review and patient assessment</li>
+          <li>Detailed, defensible reports for legal and administrative use</li>
+          <li>Expert opinion aligned with current medical standards</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Peer Review</h3>
+        <ul>
+          <li>Ambulatory and acute care case evaluation</li>
+          <li>Quality assessment and performance improvement recommendations</li>
+          <li>Clinical documentation audits</li>
+          <li>Physician coaching and guidance on guideline adherence</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Physician Coaching</h3>
+        <ul>
+          <li>Mentorship for clinical decision-making and documentation</li>
+          <li>Executive-level guidance on utilization strategy</li>
+          <li>Support for compliance, quality, and peer review processes</li>
+          <li>Leadership coaching for physicians and care teams</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -187,10 +224,42 @@
   <div class="section" id="experience">
     <h2>Experience</h2>
     <div class="grid">
-      <div class="card"><h3>Chief Medical Officer & Executive Leadership</h3><p>Served in multiple CMO and executive roles overseeing quality, safety, credentialing, and peer review across large physician networks.</p></div>
-      <div class="card"><h3>Utilization Management & Peer Review</h3><p>High-volume chart audits, case evaluation, and consistent evidence-based determinations.</p></div>
-      <div class="card"><h3>Clinical Practice</h3><p>Over 25 years of primary care experience managing complex patients with guideline-directed care.</p></div>
-      <div class="card"><h3>Medical Education & Academic Roles</h3><p>Assistant Clinical Professor training physicians and advanced practice providers in clinical reasoning, documentation, and defensible decision-making.</p></div>
+      <div class="card">
+        <h3>Chief Medical Officer & Executive Leadership</h3>
+        <ul>
+          <li>Oversight of quality, safety, and credentialing for large physician networks</li>
+          <li>Executive decision-making in healthcare operations</li>
+          <li>Leadership of clinical and administrative teams</li>
+          <li>Policy implementation and strategic planning</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Utilization Management & Peer Review</h3>
+        <ul>
+          <li>High-volume chart audits and case evaluations</li>
+          <li>Defensible, evidence-based determinations for medical necessity</li>
+          <li>Implementation of guideline-driven review processes</li>
+          <li>Mentorship and coaching of reviewing physicians</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Clinical Practice</h3>
+        <ul>
+          <li>Over 25 years managing complex patients in primary care</li>
+          <li>Guideline-directed care and chronic disease management</li>
+          <li>Patient-centered approach and quality outcomes</li>
+          <li>Integration of best practices in acute and ambulatory settings</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Medical Education & Academic Roles</h3>
+        <ul>
+          <li>Assistant Clinical Professor mentoring physicians and advanced practice providers</li>
+          <li>Training in clinical reasoning, documentation, and defensible decision-making</li>
+          <li>Curriculum development for clinical education programs</li>
+          <li>Leadership development for emerging physician leaders</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -213,6 +282,33 @@
     <p>For utilization review, IME services, or consulting inquiries:</p>
     <a href="mailto:marx.linkedin@gmail.com" class="btn">Contact Us</a>
   </div>
+
+  <!-- SCROLL & ANIMATION SCRIPT -->
+  <script>
+    const sections = document.querySelectorAll('div.section');
+    const buttons = document.querySelectorAll('.btn-hero');
+    const cards = document.querySelectorAll('.card');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const scrollPos = window.pageYOffset + 150;
+
+      sections.forEach(section => {
+        if(scrollPos >= section.offsetTop) current = section.getAttribute('id');
+      });
+
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if(btn.getAttribute('href') === '#' + current) btn.classList.add('active');
+      });
+
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if(cardTop < windowHeight - 100) card.classList.add('visible');
+      });
+    });
+  </script>
 
 </body>
 </html>
