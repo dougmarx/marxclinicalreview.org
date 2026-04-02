@@ -11,44 +11,78 @@
       font-family: Arial, sans-serif;
       color: #1a1a1a;
       line-height: 1.6;
-      background-color: #f5f7fa;
+      background-color: #f4f5f7;
+      scroll-behavior: smooth;
     }
 
+    /* HERO */
     .hero {
       background: linear-gradient(135deg, #081a33, #1f3f6d);
       color: white;
       text-align: center;
-      padding: 110px 20px 90px;
+      padding: 140px 20px 100px; /* increased top padding to balance larger logo */
+      position: relative;
+      box-shadow: inset 0 -15px 30px rgba(0,0,0,0.2);
     }
 
     .logo {
-      width: 280px; /* ⬅️ EVEN LARGER */
+      width: 420px; /* ⬅️ 50% larger than before */
       margin-bottom: 30px;
-      filter: drop-shadow(0px 12px 22px rgba(0,0,0,0.55));
+      filter: drop-shadow(0px 12px 25px rgba(0,0,0,0.55));
     }
 
     .hero h1 {
-      font-size: 2.9rem;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 12px;
       letter-spacing: 1px;
     }
 
     .hero p {
-      font-size: 1.25rem;
-      opacity: 0.9;
+      font-size: 1.2rem;
       max-width: 700px;
-      margin: auto;
+      margin: 10px auto 30px;
+      opacity: 0.9;
     }
 
+    .hero .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .hero .btn-hero {
+      padding: 12px 28px;
+      background: #0f4c81;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero .btn-hero:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 8px 18px rgba(0,0,0,0.4);
+    }
+
+    /* SECTIONS */
     .section {
       max-width: 1000px;
       margin: auto;
       padding: 70px 20px;
+      background: #f4f5f7;
+    }
+
+    .section:nth-of-type(even) {
+      background: #e1e4ea;
     }
 
     h2 {
       color: #1f3f6d;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      text-align: center;
     }
 
     .grid {
@@ -57,26 +91,40 @@
     }
 
     .card {
-      background: white;
-      padding: 22px;
-      border-radius: 10px;
-      box-shadow: 0px 5px 14px rgba(0,0,0,0.08);
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* CONTACT */
     .contact {
       text-align: center;
-      padding-bottom: 80px;
+      padding-bottom: 100px;
+      background: #081a33;
+      color: white;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background-color: #1f3f6d;
+    .contact .btn {
+      padding: 14px 30px;
+      background-color: #0f4c81;
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      margin-top: 20px;
       font-weight: bold;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
     }
 
     @media(min-width: 800px) {
@@ -93,115 +141,64 @@
   <div class="hero">
     <img src="logo.png" class="logo">
     <h1>Marx Clinical Review</h1>
-    <p>
-      Physician-led utilization review, independent medical evaluation, and clinical consulting 
-      grounded in evidence-based medicine and executive-level healthcare leadership.
-    </p>
+    <p>Physician-led utilization review, independent medical evaluation, and clinical consulting grounded in evidence-based medicine and executive-level healthcare leadership.</p>
+
+    <div class="buttons">
+      <a href="#about" class="btn-hero">About</a>
+      <a href="#services" class="btn-hero">Services</a>
+      <a href="#experience" class="btn-hero">Experience</a>
+      <a href="#credentials" class="btn-hero">Credentials</a>
+      <a href="#contact" class="btn-hero">Contact</a>
+    </div>
   </div>
 
   <!-- ABOUT -->
-  <div class="section">
+  <div class="section" id="about">
     <h2>About</h2>
-    <p>
-      Marx Clinical Review is led by <strong>Douglas Marx, DO</strong>, a board-certified Family Medicine physician 
-      with over 25 years of clinical and executive leadership experience. His work spans primary care, 
-      utilization management, peer review, and independent medical evaluation across ambulatory and acute care settings.
-    </p>
-
-    <p>
-      Dr. Marx has directed quality oversight for more than 500 physicians, delivering high-volume, 
-      guideline-driven clinical determinations with precision, consistency, and rapid turnaround. 
-      His approach emphasizes clear, defensible documentation aligned with established standards including 
-      ODG, MCG, and AMA Guides.
-    </p>
+    <p>Marx Clinical Review is led by <strong>Douglas Marx, DO</strong>, a board-certified Family Medicine physician with over 25 years of clinical and executive leadership experience. His work spans primary care, utilization management, peer review, and independent medical evaluation across ambulatory and acute care settings.</p>
+    <p>Dr. Marx has directed quality oversight for more than 500 physicians, delivering high-volume, guideline-driven clinical determinations with precision, consistency, and rapid turnaround. His approach emphasizes clear, defensible documentation aligned with established standards including ODG, MCG, and AMA Guides.</p>
   </div>
 
   <!-- SERVICES -->
-  <div class="section">
+  <div class="section" id="services">
     <h2>Services</h2>
-
     <div class="grid">
-      <div class="card">
-        <h3>Utilization Review</h3>
-        <p>Medical necessity determinations with clear, guideline-based rationale and defensible documentation.</p>
-      </div>
-
-      <div class="card">
-        <h3>Independent Medical Examinations</h3>
-        <p>Objective, comprehensive evaluations for disability, workers’ compensation, and legal cases.</p>
-      </div>
-
-      <div class="card">
-        <h3>Peer Review</h3>
-        <p>Ambulatory and acute care case review focused on quality, appropriateness, and adherence to standards.</p>
-      </div>
-
-      <div class="card">
-        <h3>Physician Consulting</h3>
-        <p>Clinical operations, utilization strategy, and performance evaluation for healthcare organizations.</p>
-      </div>
+      <div class="card"><h3>Utilization Review</h3><p>Medical necessity determinations with clear, guideline-based rationale and defensible documentation.</p></div>
+      <div class="card"><h3>Independent Medical Examinations</h3><p>Objective, comprehensive evaluations for disability, workers’ compensation, and legal cases.</p></div>
+      <div class="card"><h3>Peer Review</h3><p>Ambulatory and acute care case review focused on quality, appropriateness, and adherence to standards.</p></div>
+      <div class="card"><h3>Physician Consulting</h3><p>Clinical operations, utilization strategy, and performance evaluation for healthcare organizations.</p></div>
     </div>
   </div>
 
   <!-- EXPERIENCE -->
-  <div class="section">
+  <div class="section" id="experience">
     <h2>Experience</h2>
-
     <div class="grid">
-
-      <div class="card">
-        <h3>Chief Medical Officer & Executive Leadership</h3>
-        <p>
-          Served in multiple CMO and executive medical leadership roles overseeing quality, safety, 
-          credentialing, and peer review across large multispecialty physician networks.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Utilization Management & Peer Review</h3>
-        <p>
-          Extensive experience in high-volume utilization review, chart audits, and case evaluation 
-          with consistent application of evidence-based guidelines.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Clinical Practice</h3>
-        <p>
-          Over two decades of primary care experience managing complex patient populations with 
-          emphasis on diagnostic accuracy and guideline-directed treatment.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Medical Education & Academic Roles</h3>
-        <p>
-          Assistant Clinical Professor with experience training physicians and advanced practice providers 
-          in clinical reasoning, documentation, and defensible decision-making.
-        </p>
-      </div>
-
+      <div class="card"><h3>Chief Medical Officer & Executive Leadership</h3><p>Served in multiple CMO and executive roles overseeing quality, safety, credentialing, and peer review across large physician networks.</p></div>
+      <div class="card"><h3>Utilization Management & Peer Review</h3><p>High-volume chart audits, case evaluation, and consistent evidence-based determinations.</p></div>
+      <div class="card"><h3>Clinical Practice</h3><p>Over 25 years of primary care experience managing complex patients with guideline-directed care.</p></div>
+      <div class="card"><h3>Medical Education & Academic Roles</h3><p>Assistant Clinical Professor training physicians and advanced practice providers in clinical reasoning, documentation, and defensible decision-making.</p></div>
     </div>
   </div>
 
   <!-- CREDENTIALS -->
-  <div class="section">
+  <div class="section" id="credentials">
     <h2>Credentials</h2>
     <div class="card">
       <p>
         <strong>Board Certification:</strong> American Board of Family Medicine<br>
         <strong>Licensure:</strong> Wisconsin (Active), Interstate Medical Licensure Compact<br>
         <strong>Training:</strong> Medical College of Wisconsin (Residency), Midwestern University (DO)<br>
-        <strong>Additional:</strong> GE Healthcare CMO Fellow – The Health Management Academy
+        <strong>Fellowship:</strong> GE Healthcare CMO Fellow – The Health Management Academy
       </p>
     </div>
   </div>
 
   <!-- CONTACT -->
-  <div class="section contact">
+  <div class="section contact" id="contact">
     <h2>Contact</h2>
     <p>For utilization review, IME services, or consulting inquiries:</p>
-    <a href="mailto:info@marxclinicalreview.org" class="btn">Contact Us</a>
+    <a href="mailto:marx.linkedin@gmail.com" class="btn">Contact Us</a>
   </div>
 
 </body>
