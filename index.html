@@ -18,39 +18,49 @@
       background: linear-gradient(135deg, #081a33, #1f3f6d);
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 110px 20px 90px;
     }
 
     .logo {
-      width: 140px;
-      margin-bottom: 20px;
-      filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.4));
+      width: 280px; /* ⬅️ EVEN LARGER */
+      margin-bottom: 30px;
+      filter: drop-shadow(0px 12px 22px rgba(0,0,0,0.55));
+    }
+
+    .hero h1 {
+      font-size: 2.9rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: auto;
     }
 
     .section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 60px 20px;
-    }
-
-    h1, h2 {
-      margin-bottom: 15px;
+      padding: 70px 20px;
     }
 
     h2 {
       color: #1f3f6d;
+      margin-bottom: 20px;
     }
 
-    .services, .experience {
+    .grid {
       display: grid;
       gap: 20px;
     }
 
     .card {
       background: white;
-      padding: 20px;
+      padding: 22px;
       border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+      box-shadow: 0px 5px 14px rgba(0,0,0,0.08);
     }
 
     .contact {
@@ -60,16 +70,17 @@
 
     .btn {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 14px 28px;
       background-color: #1f3f6d;
       color: white;
       text-decoration: none;
       border-radius: 6px;
       margin-top: 20px;
+      font-weight: bold;
     }
 
-    @media(min-width: 700px) {
-      .services, .experience {
+    @media(min-width: 800px) {
+      .grid {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -82,41 +93,52 @@
   <div class="hero">
     <img src="logo.png" class="logo">
     <h1>Marx Clinical Review</h1>
-    <p>High-yield clinical education, utilization review, and physician consulting</p>
+    <p>
+      Physician-led utilization review, independent medical evaluation, and clinical consulting 
+      grounded in evidence-based medicine and executive-level healthcare leadership.
+    </p>
   </div>
 
   <!-- ABOUT -->
   <div class="section">
     <h2>About</h2>
     <p>
-      Marx Clinical Review is led by a board-certified physician with extensive experience in primary care, 
-      utilization review, and independent medical evaluation. The focus is on delivering practical, 
-      high-yield clinical insight that improves both patient care and healthcare system efficiency.
+      Marx Clinical Review is led by <strong>Douglas Marx, DO</strong>, a board-certified Family Medicine physician 
+      with over 25 years of clinical and executive leadership experience. His work spans primary care, 
+      utilization management, peer review, and independent medical evaluation across ambulatory and acute care settings.
+    </p>
+
+    <p>
+      Dr. Marx has directed quality oversight for more than 500 physicians, delivering high-volume, 
+      guideline-driven clinical determinations with precision, consistency, and rapid turnaround. 
+      His approach emphasizes clear, defensible documentation aligned with established standards including 
+      ODG, MCG, and AMA Guides.
     </p>
   </div>
 
   <!-- SERVICES -->
   <div class="section">
     <h2>Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Clinical Education</h3>
-        <p>Focused, board-relevant clinical review content designed for busy physicians.</p>
-      </div>
 
+    <div class="grid">
       <div class="card">
         <h3>Utilization Review</h3>
-        <p>Evidence-based review to support appropriate, high-value care decisions.</p>
+        <p>Medical necessity determinations with clear, guideline-based rationale and defensible documentation.</p>
       </div>
 
       <div class="card">
-        <h3>Independent Medical Exams</h3>
-        <p>Objective, thorough medical evaluations for disability and legal cases.</p>
+        <h3>Independent Medical Examinations</h3>
+        <p>Objective, comprehensive evaluations for disability, workers’ compensation, and legal cases.</p>
       </div>
 
       <div class="card">
-        <h3>Consulting</h3>
-        <p>Workflow optimization, clinical operations, and physician advisory services.</p>
+        <h3>Peer Review</h3>
+        <p>Ambulatory and acute care case review focused on quality, appropriateness, and adherence to standards.</p>
+      </div>
+
+      <div class="card">
+        <h3>Physician Consulting</h3>
+        <p>Clinical operations, utilization strategy, and performance evaluation for healthcare organizations.</p>
       </div>
     </div>
   </div>
@@ -124,34 +146,62 @@
   <!-- EXPERIENCE -->
   <div class="section">
     <h2>Experience</h2>
-    <div class="experience">
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Chief Medical Officer & Executive Leadership</h3>
+        <p>
+          Served in multiple CMO and executive medical leadership roles overseeing quality, safety, 
+          credentialing, and peer review across large multispecialty physician networks.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Utilization Management & Peer Review</h3>
+        <p>
+          Extensive experience in high-volume utilization review, chart audits, and case evaluation 
+          with consistent application of evidence-based guidelines.
+        </p>
+      </div>
+
       <div class="card">
         <h3>Clinical Practice</h3>
-        <p>Years of frontline experience in outpatient primary care and patient management.</p>
+        <p>
+          Over two decades of primary care experience managing complex patient populations with 
+          emphasis on diagnostic accuracy and guideline-directed treatment.
+        </p>
       </div>
 
       <div class="card">
-        <h3>Utilization Management</h3>
-        <p>Extensive work in medical necessity review and payer-provider collaboration.</p>
+        <h3>Medical Education & Academic Roles</h3>
+        <p>
+          Assistant Clinical Professor with experience training physicians and advanced practice providers 
+          in clinical reasoning, documentation, and defensible decision-making.
+        </p>
       </div>
 
-      <div class="card">
-        <h3>Medical Education</h3>
-        <p>Experience teaching and simplifying complex medical topics for clinicians.</p>
-      </div>
+    </div>
+  </div>
 
-      <div class="card">
-        <h3>Leadership</h3>
-        <p>Involvement in clinical operations, quality improvement, and system design.</p>
-      </div>
+  <!-- CREDENTIALS -->
+  <div class="section">
+    <h2>Credentials</h2>
+    <div class="card">
+      <p>
+        <strong>Board Certification:</strong> American Board of Family Medicine<br>
+        <strong>Licensure:</strong> Wisconsin (Active), Interstate Medical Licensure Compact<br>
+        <strong>Training:</strong> Medical College of Wisconsin (Residency), Midwestern University (DO)<br>
+        <strong>Additional:</strong> GE Healthcare CMO Fellow – The Health Management Academy
+      </p>
     </div>
   </div>
 
   <!-- CONTACT -->
   <div class="section contact">
     <h2>Contact</h2>
-    <p>For inquiries, collaboration, or services:</p>
-    <a href="mailto:info@marxclinicalreview.org" class="btn">Email</a>
+    <p>For utilization review, IME services, or consulting inquiries:</p>
+    <a href="mailto:info@marxclinicalreview.org" class="btn">Contact Us</a>
   </div>
 
 </body>
