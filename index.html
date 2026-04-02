@@ -1,224 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marx Clinical Review | Douglas Marx, DO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marx Clinical Review</title>
 
-<style>
+  <style>
     body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
-        background-color: #f4f6f8;
-        color: #1a1a1a;
-    }
-
-    header {
-        background: #0a1f33;
-        color: white;
-        padding: 30px 20px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 2em;
-    }
-
-    header p {
-        margin: 8px 0;
-        color: #cbd5e1;
-    }
-
-    .cta-button {
-        display: inline-block;
-        margin-top: 10px;
-        background: #3b82f6;
-        color: white;
-        padding: 10px 18px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 0.9em;
-    }
-
-    nav {
-        background: #111827;
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-    }
-
-    nav a {
-        color: #e5e7eb;
-        margin: 0 15px;
-        text-decoration: none;
-        font-size: 0.9em;
-    }
-
-    nav a:hover {
-        color: #3b82f6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0a1f3d, #1f3f6d);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
 
     .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
+      max-width: 700px;
+      padding: 20px;
     }
 
-    section {
-        margin-bottom: 50px;
+    .logo {
+      width: 140px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.4));
     }
 
-    h2 {
-        border-left: 4px solid #3b82f6;
-        padding-left: 10px;
-        color: #111827;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
-    .card {
-        background: white;
-        padding: 20px;
-        margin-top: 15px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+      margin-bottom: 30px;
     }
 
-    .services-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ffffff;
+      color: #1f3f6d;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
-    .service {
-        background: white;
-        padding: 20px;
-        border-left: 4px solid #3b82f6;
-        border-radius: 8px;
+    .btn:hover {
+      background-color: #dbe6f5;
     }
-
-    .tag {
-        display: inline-block;
-        background: #e5e7eb;
-        padding: 5px 10px;
-        margin: 5px 5px 0 0;
-        border-radius: 5px;
-        font-size: 0.8em;
-    }
-
-    .cta-section {
-        text-align: center;
-        background: #e5e7eb;
-        padding: 30px;
-        border-radius: 10px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #0a1f33;
-        color: #9ca3af;
-        font-size: 0.8em;
-    }
-</style>
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-<header>
+    <!-- LOGO -->
+    <img src="logo.png" alt="Marx Clinical Review Logo" class="logo">
+
+    <!-- TITLE -->
     <h1>Marx Clinical Review</h1>
-    <p>Douglas Marx, DO | IME • Utilization Review • Medical Expert Consulting</p>
-    <p>Multistate Licensure via IMLC • info@marxclinicalreview.org</p>
-    <a href="mailto:info@marxclinicalreview.org" class="cta-button">Request a Case Review</a>
-</header>
 
-<nav>
-    <a href="#services">Services</a>
-    <a href="#summary">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <!-- TAGLINE -->
+    <p>Modern, high-yield clinical education for today’s physician</p>
 
-<div class="container">
+    <!-- BUTTON (optional future use) -->
+    <a href="mailto:info@marxclinicalreview.org" class="btn">
+      Contact Us
+    </a>
 
-<section id="services">
-    <h2>Services</h2>
-
-    <div class="services-grid">
-        <div class="service">
-            <h3>Independent Medical Examinations (IME)</h3>
-            <p>Comprehensive, objective medical evaluations with clear, defensible reporting for legal and insurance cases.</p>
-        </div>
-
-        <div class="service">
-            <h3>Utilization Review (UR)</h3>
-            <p>Evidence-based determinations aligned with national guidelines to support appropriate care and cost management.</p>
-        </div>
-
-        <div class="service">
-            <h3>Medical Expert Review</h3>
-            <p>Case analysis, second opinions, and expert consultation for complex medical and legal matters.</p>
-        </div>
-    </div>
-</section>
-
-<section id="summary">
-    <h2>About</h2>
-    <div class="card">
-        <p>
-            Physician with over 25 years of clinical and executive leadership experience. Specializing in utilization review,
-            independent medical examinations, and evidence-based medical decision-making.
-        </p>
-        <p>
-            Multistate licensed through the Interstate Medical Licensure Compact (IMLC), enabling efficient, cross-jurisdictional review services.
-        </p>
-    </div>
-</section>
-
-<section id="experience">
-    <h2>Experience & Expertise</h2>
-    <div class="card">
-        <span class="tag">Utilization Review</span>
-        <span class="tag">Independent Medical Exams</span>
-        <span class="tag">Multistate Medical Review</span>
-        <span class="tag">Clinical Leadership</span>
-        <span class="tag">Healthcare Strategy</span>
-        <span class="tag">Evidence-Based Medicine</span>
-    </div>
-
-    <div class="card">
-        <ul>
-            <li>25+ years clinical and executive leadership experience</li>
-            <li>Former Chief Medical Officer and physician executive</li>
-            <li>Extensive experience with evidence-based guidelines and case review</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2>Availability</h2>
-    <div class="card">
-        <ul>
-            <li>Timely case review with rapid turnaround</li>
-            <li>Available for ongoing consulting relationships</li>
-            <li>Responsive communication with legal and payer clients</li>
-        </ul>
-    </div>
-</section>
-
-<section id="contact" class="cta-section">
-    <h2>Request a Case Review</h2>
-    <p>For IME, utilization review, or expert consultation inquiries:</p>
-    <a href="mailto:info@marxclinicalreview.org" class="cta-button">Contact Now</a>
-</section>
-
-</div>
-
-<footer>
-    © 2026 Marx Clinical Review
-</footer>
-
+  </div>
 </body>
 </html>
